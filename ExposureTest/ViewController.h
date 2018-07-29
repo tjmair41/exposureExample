@@ -6,9 +6,18 @@
 //  Copyright © 2018 Tyler Mairose. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "VideoCamera.h"
+using namespace cv;
 
-@interface ViewController : UIViewController
+#import <UIKit/UIKit.h>
+#import <CoreMotion/CoreMotion.h>
+
+@interface ViewController : UIViewController<CvVideoCameraDelegate> {
+
+    IBOutlet UIImageView *imageView;
+}
+
+@property (nonatomic, retain) CvVideoCamera *videoCamera;
 
 
 @end
